@@ -11,7 +11,7 @@ describe('Quiz Component', () => {
   it('has a Quiz class that extends Component @quiz-component-has-quiz-class', () => {
     let file;
     try {
-      file = fs.readFileSync(__dirname + '/../../Quiz.js').toString();
+      file = fs.readFileSync(__dirname + './../../Quiz.js').toString();
     } catch (e) {
       assert(false, "The Quiz.js file hasn't been created yet.")
     }
@@ -24,7 +24,7 @@ describe('Quiz Component', () => {
       if (element.type == 'ClassDeclaration') {
         if (element.id.name == 'Quiz') {
           if (element.superClass.name == 'Component') {
-            
+
           } else {
             assert(false, "We found a class named Quiz, but it doesn't extend the Component class.")
           }
